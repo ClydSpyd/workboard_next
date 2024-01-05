@@ -10,6 +10,7 @@ const HeadingFont = localFont({
 });
 
 export default function LandingPage() {
+  
   return (
     <div className="flex items-center justify-center flex-col h-full">
       <div className="flex items-center justify-center flex-col">
@@ -41,8 +42,8 @@ export default function LandingPage() {
         Taskify
       </div>
       <Button className="mt-4" size={"lg"} asChild>
-        <Link href={"/intro/posts"}>GO</Link>
-        {/* <Link href={"/signup"}>GO</Link> */}
+        {/* <Link href={"/intro/posts"}>GO</Link> */}
+        <Link href={"/sign-up"}>GO</Link>
       </Button>
     </div>
   );
