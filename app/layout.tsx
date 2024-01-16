@@ -3,6 +3,8 @@ import "./globals.css";
 import { fontVariables } from "@/utils/fonts";
 import { siteConfig } from "@/config/site";
 import { ClerkProvider } from "@clerk/nextjs";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata: Metadata = {
   title: {
@@ -24,10 +26,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={fontVariables}>{children}</body>
-      </html>
-    </ClerkProvider>
+    <>
+      <ClerkProvider>
+        <html lang="en">
+          <body className={fontVariables}>
+            {children}
+            <ToastContainer />
+          </body>
+        </html>
+      </ClerkProvider>
+    </>
   );
 }

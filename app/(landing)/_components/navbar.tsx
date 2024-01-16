@@ -7,7 +7,7 @@ const Navbar = () => {
   const { userId } = auth();
   return (
     <div className="fixed top-0 w-full h-14 px-4 border-b shadow-sm flex bg-white items-center">
-      <div className="md:max-w-screen-lg mx-auto flex items-center w-full justify-between">
+      <div className="md:max-w-screen-xl mx-auto flex items-center w-full justify-between">
         <Logo />
         <div className="space-x-4 block">
           {userId ? (
